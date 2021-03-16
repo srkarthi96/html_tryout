@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            let fbutton = async ()=>{
+                let name = document.getElementById('name').value
+                let password = document.getElementById('password').value
+                document.write(`Username is ${name} and password is ${password}`);
+            }
+        </script>
+    </head>
+    <body>
+        <div style="border: 10" >
+            <form method="POST" action="/addName">
+            Name: <input type="text" placeholder="Enter UserName" id= "name" name="userName"><br>
+            Email: <input type="text" placeholder="Enter Email" id="Email" name="email"><br>
+            Password: <input type="text" placeholder="Enter password" id="password" name="password"><br>
+            <input type="submit" value="next">
+            </form>
+            <form action="/user_list" method="GET">
+                <input type="submit" value="users">
+            </form>
+        </div>  
+    </body>
+</html>
